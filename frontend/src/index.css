@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Variables personalizadas */
+:root {
+  --primary-color: #10b981;
+  --secondary-color: #0ea5e9;
+  --danger-color: #ef4444;
+  --dark-bg: #1f2937;
+  --light-bg: #f9fafb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light-bg);
+  color: #111827;
+}
+
+/* Botones personalizados */
+.btn {
+  @apply px-4 py-2 rounded font-semibold transition duration-200 ease-in-out;
+}
+
+.btn-primary {
+  @apply bg-green-500 text-white hover:bg-green-600 active:scale-95;
+}
+
+.btn-secondary {
+  @apply bg-blue-500 text-white hover:bg-blue-600 active:scale-95;
+}
+
+.btn-danger {
+  @apply bg-red-500 text-white hover:bg-red-600 active:scale-95;
+}
+
+.btn-outline {
+  @apply border-2 border-green-500 text-green-500 hover:bg-green-50 active:scale-95;
+}
+
+/* Inputs personalizados */
+input,
+textarea,
+select {
+  @apply w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500;
+}
+
+/* Cards */
+.card {
+  @apply bg-white rounded-lg shadow-md p-6 transition duration-200 hover:shadow-lg;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
